@@ -1,6 +1,7 @@
 package ru.hogwarts.school.service.impl;
 
 import org.springframework.stereotype.Service;
+import ru.hogwarts.school.exeption.FacultyNotFoundException;
 import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.repository.FacultyRepository;
 import ru.hogwarts.school.service.FacultyService;
@@ -21,7 +22,8 @@ public class FacultyServiceImpl implements FacultyService {
     }
 
     public Faculty findFaculty(long id) {
-        return facultyRepository.findById(id).get();
+        return facultyRepository.findById(id)
+                .orElseThrow(() -> new FacultyNotFoundException());
     }
 
     public Faculty editFaculty(Faculty faculty) {
