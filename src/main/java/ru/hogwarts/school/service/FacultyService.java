@@ -10,4 +10,5 @@ public interface FacultyService {
     Faculty editFaculty(Faculty faculty);
     void deleteFaculty(long id);
     Collection<Faculty> findByColor(String color);
+    Collection<Faculty> findByNameOrColor(String color, String name);
 }

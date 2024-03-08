@@ -10,5 +10,6 @@ public interface StudentService {
     Student editStudent(Student student);
     void deleteStudent(long id);
     Collection<Student> findStudentByAge(int age);
+    Collection<Student> findByAgeBetween(int  min, int  max);
 
 }

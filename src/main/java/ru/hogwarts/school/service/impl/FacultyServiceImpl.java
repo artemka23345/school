@@ -37,5 +37,9 @@ public class FacultyServiceImpl implements FacultyService {
     public Collection<Faculty> findByColor(String color) {
         return facultyRepository.findByColor(color);
     }
+
+    public Collection<Faculty> findByNameOrColor(String color, String name) {
+        return facultyRepository.getByNameIgnoreCaseOrColorIgnoreCase(color, name);
+    }
 }
 

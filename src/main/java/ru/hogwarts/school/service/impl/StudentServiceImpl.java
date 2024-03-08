@@ -38,4 +38,8 @@ private final StudentRepository studentRepository;
         return studentRepository.findByAge(age);
     }
 
+    public Collection<Student> findByAgeBetween(int max, int min) {
+        return studentRepository.findByAgeBetween(max, min);
+    }
+
 }
