@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 import ru.hogwarts.school.exeption.StudentNotFoundException;
 import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.model.Student;
-import ru.hogwarts.school.repository.FacultyRepository;
 import ru.hogwarts.school.repository.StudentRepository;
 import ru.hogwarts.school.service.StudentService;
 
@@ -45,12 +44,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     public Faculty findFacultyOfStudent(long id) {
-        Optional<Student> student = studentRepository.findById(id);
-        if (student.isPresent()) {
-            return student.get().getFaculty();
-        } else {
-            return null;
+        return findStudentById(id).getFaculty();
         }
-    }
+
 
 }
