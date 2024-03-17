@@ -11,11 +11,15 @@ import ru.hogwarts.school.service.FacultyService;
 import java.util.*;
 
 @Service
-@RequiredArgsConstructor
+
 
 public class FacultyServiceImpl implements FacultyService {
 
     private final FacultyRepository facultyRepository;
+
+    public FacultyServiceImpl(FacultyRepository facultyRepository) {
+        this.facultyRepository = facultyRepository;
+    }
 
 
     public Faculty addFaculty(Faculty faculty) {

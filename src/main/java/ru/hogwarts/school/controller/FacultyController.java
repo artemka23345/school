@@ -14,10 +14,14 @@ import java.util.Collections;
 
 @RestController
 @RequestMapping("/faculty")
-@RequiredArgsConstructor
+
 public class FacultyController {
 
     private final FacultyService facultyService;
+
+    public FacultyController(FacultyService facultyService) {
+        this.facultyService = facultyService;
+    }
 
 
     @GetMapping("{id}")

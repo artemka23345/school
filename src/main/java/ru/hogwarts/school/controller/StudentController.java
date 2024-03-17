@@ -15,9 +15,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/student")
-@RequiredArgsConstructor
+
 public class StudentController {
     private final StudentService studentService;
+
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
 
 
     @GetMapping("{id}")

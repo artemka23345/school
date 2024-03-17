@@ -23,13 +23,18 @@ import static java.nio.file.StandardOpenOption.CREATE_NEW;
 
 @Service
 @Transactional
-@RequiredArgsConstructor
+
 public class AvatarServiceImpl implements AvatarService {
 
     @Value("avatars")
     private String avatarsDir;
     private final AvatarRepository avatarRepository;
     private final StudentService studentService;
+
+    public AvatarServiceImpl(AvatarRepository avatarRepository, StudentService studentService) {
+        this.avatarRepository = avatarRepository;
+        this.studentService = studentService;
+    }
 
     public void uploadAvatar(Long studentId, MultipartFile avatarFile) throws IOException {
         Student student = studentService.findStudentById(studentId);

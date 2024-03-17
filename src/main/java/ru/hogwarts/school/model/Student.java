@@ -8,7 +8,6 @@ import java.util.Objects;
 
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -25,5 +24,9 @@ public class Student {
     @JsonBackReference
     private Faculty faculty;
 
-
+    public Student(Long id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 }

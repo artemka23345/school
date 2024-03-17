@@ -11,7 +11,12 @@ import java.util.Objects;
 
 @Entity
 @JsonIgnoreProperties(value = {"students"})
-@Data
+@Getter
+@Setter
+@EqualsAndHashCode
+@NoArgsConstructor
+
+
 public class Faculty {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,4 +26,10 @@ public class Faculty {
     @OneToMany(mappedBy = "faculty")
     @JsonManagedReference
     private List<Student> students;
+
+    public Faculty(Long id, String name, String color) {
+        this.id = id;
+        this.name = name;
+        this.color = color;
+    }
 }

@@ -3,6 +3,8 @@ package ru.hogwarts.school.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Arrays;
+
 @Entity
 @Getter
 @Setter
@@ -23,4 +25,5 @@ public class Avatar {
 
     @OneToOne
     private Student student;
+
 }
