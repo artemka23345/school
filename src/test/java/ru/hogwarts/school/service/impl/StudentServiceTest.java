@@ -26,9 +26,9 @@ import static org.junit.jupiter.api.Assertions.*;
         @Mock
         StudentRepository repository;
 
-        Student STUDENT_1 =new Student (10L,"Harry",12);
+        Student STUDENT_1 =new Student (10L,"Harry",12,null);
 
-        Student STUDENT_2 =new Student (12L,"Ron",11);
+        Student STUDENT_2 =new Student (12L,"Ron",11,null);
 
         List<Student> studentList;
 
