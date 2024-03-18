@@ -1,4 +1,4 @@
-package ru.hogwarts.school.controller;
+package ru.hogwarts.school.controller.RestTemplate;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -10,6 +10,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
+import ru.hogwarts.school.controller.FacultyController;
 import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.model.Student;
 import ru.hogwarts.school.repository.FacultyRepository;
@@ -31,6 +32,7 @@ public class FacultyControllerTests {
     @Autowired
     private TestRestTemplate testRestTemplate;
 
+
     @Test
     void contextLoads() throws Exception {
         Assertions.assertThat(facultyController).isNotNull();
@@ -39,18 +41,18 @@ public class FacultyControllerTests {
     @Test
     public void testFindFacultyById() throws Exception {
         Faculty testFaculty = new Faculty();
-        testFaculty.setName("Lexa");
+        testFaculty.setName("testFac");
         facultyController.createFaculty(testFaculty);
 
         Faculty actual = this.testRestTemplate.getForObject("http://localhost:" + port + "/faculty/" + testFaculty.getId(), Faculty.class);
         Assertions
-                .assertThat(actual.getName()).isEqualTo("Lexa");
+                .assertThat(actual.getName()).isEqualTo("testFac");
         facultyController.deleteFaculty(testFaculty.getId());
     }
 
     @Test
     public void testCreateFaculty() throws Exception {
-        Faculty faculty = new Faculty(10L, "Lexa", "red", null);
+        Faculty faculty = new Faculty(10L, "testFac", "red", null);
 
         Faculty actual = this.testRestTemplate.postForObject("http://localhost:" + port + "/faculty/createFaculty", faculty, Faculty.class);
 
@@ -64,13 +66,13 @@ public class FacultyControllerTests {
     @Test
     public void testEditFaculty() throws Exception {
         Faculty faculty1 = new Faculty();
-        faculty1.setName("Lexa");
+        faculty1.setName("testFac");
         faculty1.setColor("red");
         faculty1.setStudents(null);
         facultyRepository.save(faculty1);
         Faculty faculty2 = new Faculty();
         faculty2.setId(faculty1.getId());
-        faculty2.setName("Dima");
+        faculty2.setName("testFac2");
         faculty2.setColor("green");
         faculty2.setStudents(null);
 
@@ -88,7 +90,7 @@ public class FacultyControllerTests {
     void testDeleteFaculty() throws Exception {
         Faculty faculty1 = new Faculty();
         faculty1.setId(20L);
-        faculty1.setName("Lexa");
+        faculty1.setName("testFac");
         facultyController.createFaculty(faculty1);
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.delete("http://localhost:" + port + "/faculty/" + faculty1.getId());
@@ -98,7 +100,7 @@ public class FacultyControllerTests {
     public void testFindFacultyByColorOrName() throws Exception {
         Faculty facultyTest = new Faculty();
         facultyTest.setId(20L);
-        facultyTest.setName("Lexa");
+        facultyTest.setName("testFac");
         facultyTest.setColor("red");
         facultyController.createFaculty(facultyTest);
 
@@ -115,7 +117,7 @@ public class FacultyControllerTests {
     public void testGetAllStudentOfFaculty() throws Exception {
         Faculty facultyTest = new Faculty();
         facultyTest.setId(20L);
-        facultyTest.setName("Lexa");
+        facultyTest.setName("testFac");
         facultyTest.setColor("red");
         facultyController.createFaculty(facultyTest);
         Student student1 = new Student();
