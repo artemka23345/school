@@ -7,12 +7,8 @@ import lombok.*;
 import java.util.Objects;
 
 @Entity
+@Data
 @NoArgsConstructor
-@Getter
-@Setter
-@EqualsAndHashCode
-@ToString
-
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

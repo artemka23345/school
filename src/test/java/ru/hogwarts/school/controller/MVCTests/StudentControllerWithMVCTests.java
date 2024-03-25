@@ -100,7 +100,7 @@ public class StudentControllerWithMVCTests {
     public void updateStudentTest() throws Exception {
         initializingVariablesForTests();
 
-        Student updateStudent = new Student(10l,name, 1 + age,null);
+        Student updateStudent = new Student(10L,name, 1 + age,null);
 
         when(studentRepository.findById(any(Long.class))).thenReturn(Optional.of(student));
         when(studentRepository.save(any(Student.class))).thenReturn(updateStudent);

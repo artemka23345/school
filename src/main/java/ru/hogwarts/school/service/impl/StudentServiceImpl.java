@@ -12,18 +12,11 @@ import ru.hogwarts.school.service.StudentService;
 import java.util.*;
 
 @Service
-
-
+@RequiredArgsConstructor
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
     private final AvatarRepository avatarRepository;
-
-    public StudentServiceImpl(StudentRepository studentRepository, AvatarRepository avatarRepository) {
-        this.studentRepository = studentRepository;
-        this.avatarRepository = avatarRepository;
-    }
-
 
     public Student addStudent(Student student) {
         return studentRepository.save(student);

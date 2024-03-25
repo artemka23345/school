@@ -39,13 +39,13 @@ public class FacultyControllerWithMVCTests {
     @InjectMocks
     private FacultyController facultyController;
 
-    private Long id = 1L;
-    private String name = "testFac";
-    private String color = "red";
+    private final Long id = 1L;
+    private final String name = "testFac";
+    private final String color = "red";
 
-    private JSONObject facultyObject = new JSONObject();
+    private final JSONObject facultyObject = new JSONObject();
 
-    private Faculty faculty = new Faculty(id,name, color,null);
+    private final Faculty faculty = new Faculty(id,name, color,null);
 
 
     private void initializingVariablesForTests() throws JSONException {
@@ -94,7 +94,7 @@ public class FacultyControllerWithMVCTests {
     public void updateFacultyTest() throws Exception {
         initializingVariablesForTests();
 
-        Faculty updateFaculty = new Faculty(12l, "new" + name,color,null);
+        Faculty updateFaculty = new Faculty(12L, "new" + name,color,null);
 
         when(facultyRepository.findById(any(Long.class))).thenReturn(Optional.of(faculty));
         when(facultyRepository.save(any(Faculty.class))).thenReturn(updateFaculty);

@@ -99,7 +99,7 @@ public class StudentControllerTests {
 
     @Test
     public void testCreateStudent() throws Exception {
-        Student student = new Student(809l,"Alex",13,null);
+        Student student = new Student(809L,"Alex",13,null);
 
         assertThat(this.testRestTemplate.postForObject("http://localhost:" + port + "/student/createStudent", student, Student.class))
                 .isNotNull();
