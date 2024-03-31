@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -35,7 +36,7 @@ public class AvatarController {
 
 
     @PostMapping(value = "/{studentId}/avatar", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    @Operation(summary = "Получить все аватары из БД по ID ")
+    @Operation(summary = "Загрузить аватары по ID")
     public ResponseEntity<String> uploadAvatar(@PathVariable Long studentId, @RequestParam MultipartFile avatar) throws IOException {
         avatarService.uploadAvatar(studentId, avatar);
         return ResponseEntity.ok().build();
@@ -67,9 +68,9 @@ public class AvatarController {
         }
     }
     @GetMapping(value = "/viewAvatars")
-    @Operation(summary = "Получить все аватары из БД ")
-    public ResponseEntity<Collection<Avatar>> getAllAvatar(@RequestParam ("page") Integer pageNumber, @RequestParam ("size") Integer pageSize) {
-        Collection<Avatar> allAvatars = avatarService.getAllAvatars(pageNumber,pageSize);
-        return ResponseEntity.ok(allAvatars);
+    @Operation(summary = "Получить аватары из БД ")
+    public Collection<Avatar> getAllAvatars(@RequestParam("page") int pageNumber,
+                                      @RequestParam("size") int pageSize) {
+        return avatarService.getAllAvatars(pageNumber, pageSize);
     }
-}
+    }

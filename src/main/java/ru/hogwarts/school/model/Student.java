@@ -7,8 +7,10 @@ import lombok.*;
 import java.util.Objects;
 
 @Entity
-@Data
 @NoArgsConstructor
+@Getter
+@Setter
+
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,4 +29,13 @@ public class Student {
         this.faculty = faculty;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", faculty=" + faculty +
+                '}';
+    }
 }

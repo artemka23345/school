@@ -10,8 +10,9 @@ import java.util.List;
 
 @Entity
 @JsonIgnoreProperties(value = {"students"})
-@Data
 @NoArgsConstructor
+@Getter
+@Setter
 public class Faculty {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
