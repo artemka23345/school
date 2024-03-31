@@ -9,5 +9,6 @@ import java.util.Optional;
 
 public interface AvatarRepository extends JpaRepository<Avatar, Long> {
     Optional<Avatar> findByStudentId(Long studentId);
-
+    @Query (value = "select * from avatar a",nativeQuery = true)
+    Collection<Avatar> getAllAvatar (Integer pageNumber, Integer pageSize);
 }

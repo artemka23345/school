@@ -1,5 +1,6 @@
 package ru.hogwarts.school.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -25,6 +26,7 @@ public class FacultyController {
 
 
     @GetMapping("{id}")
+    @Operation(summary = "Получить инфо по факультету по ID ")
     public ResponseEntity<Faculty> getFacultyInfo(@PathVariable Long id) {
         Faculty faculty = facultyService.findFaculty(id);
 
@@ -32,11 +34,13 @@ public class FacultyController {
     }
 
     @PostMapping
+    @Operation(summary = "Создать факультет")
     public Faculty createFaculty(@RequestBody Faculty faculty) {
         return facultyService.addFaculty(faculty);
     }
 
     @PutMapping
+    @Operation(summary = "Изменить факультет")
     public ResponseEntity<Faculty> editFaculty(@RequestBody Faculty faculty) {
         Faculty foundFaculty = facultyService.editFaculty(faculty);
         if (foundFaculty == null) {
@@ -46,12 +50,14 @@ public class FacultyController {
     }
 
     @DeleteMapping("{id}")
+    @Operation(summary = "Удалить факультет по ID")
     public ResponseEntity<Void> deleteFaculty(@PathVariable Long id) {
         facultyService.deleteFaculty(id);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping
+    @Operation(summary = "Найти факультет по цвету")
     public ResponseEntity<Collection<Faculty>> findFacultiesColor(@RequestParam(required = false) String color) {
         if (color != null && !color.isBlank()) {
             return ResponseEntity.ok(facultyService.findByColor(color));
@@ -60,6 +66,7 @@ public class FacultyController {
     }
 
     @GetMapping("/findFacultyByColorOrName")
+    @Operation(summary = "Получить факультет по цвету или имени")
     public ResponseEntity<Collection<Faculty>> findByNameOrColor(@RequestParam(required = false) String color, @RequestParam(required = false) String name) {
         Collection<Faculty> facultyToFind = facultyService.findByNameOrColor(color, name);
         if (facultyToFind == null) {
@@ -70,6 +77,7 @@ public class FacultyController {
     }
 
     @GetMapping("/getAllStudentOfFaculty")
+    @Operation(summary = "Получить все хстудентов факультетта")
     public ResponseEntity<Collection<Student>> getAllStudentOfFaculty(@RequestParam long id) {
         Collection<Student> studentOfFaculty = facultyService.getAllStudentOfFaculty(id);
         if (studentOfFaculty == null) {

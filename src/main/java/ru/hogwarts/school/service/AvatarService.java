@@ -4,9 +4,11 @@ import org.springframework.web.multipart.MultipartFile;
 import ru.hogwarts.school.model.Avatar;
 
 import java.io.IOException;
+import java.util.Collection;
 
 public interface AvatarService {
     void uploadAvatar(Long studentId, MultipartFile file) throws IOException;
     Avatar findAvatar(long studentId);
+    public Collection<Avatar> getAllAvatars(Integer pageNumber, Integer pageSize);
 
 }

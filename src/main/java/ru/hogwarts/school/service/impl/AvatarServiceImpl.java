@@ -17,6 +17,7 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collection;
 
 import static java.nio.file.StandardOpenOption.CREATE_NEW;
 
@@ -80,5 +81,8 @@ public class AvatarServiceImpl implements AvatarService {
 
     public String getExtension(String fileName) {
         return fileName.substring(fileName.lastIndexOf(".") + 1);
+    }
+    public Collection<Avatar> getAllAvatars(Integer pageNumber, Integer pageSize) {
+        return avatarRepository.getAllAvatar(pageNumber,pageSize);
     }
 }
