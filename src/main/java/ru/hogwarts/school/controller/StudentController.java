@@ -85,7 +85,7 @@ public class StudentController {
     }
     @GetMapping("/getAverageAgeOfStudents")
     @Operation(summary = "Получить средний возраст всех студентов ")
-    public ResponseEntity<Integer> getAverageAgeOfStudents() {
+    public ResponseEntity<Double> getAverageAgeOfStudents() {
         if (studentService.getAverageAge() == 0) {
             return ResponseEntity.notFound().build();
         }
