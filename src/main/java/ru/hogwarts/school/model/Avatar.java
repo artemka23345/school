@@ -6,12 +6,8 @@ import lombok.*;
 import java.util.Arrays;
 
 @Entity
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 @NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class Avatar {
 
     @Id

@@ -24,9 +24,9 @@ class FacultyServiceTest {
     @Mock
     FacultyRepository repository;
 
-    Faculty FACULTY_1 =new Faculty (1L,"Griffindor","red");
+    Faculty FACULTY_1 =new Faculty (1L,"Griffindor","red",null);
 
-    Faculty FACULTY_2 =new Faculty (2L,"Ravenclaw","blue");
+    Faculty FACULTY_2 =new Faculty (2L,"Ravenclaw","blue",null);
 
     List<Faculty> facultyList;
 

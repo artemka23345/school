@@ -1,7 +1,6 @@
 package ru.hogwarts.school.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,11 +10,10 @@ import ru.hogwarts.school.service.StudentService;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/student")
-
 public class StudentController {
     private final StudentService studentService;
 
@@ -63,7 +61,7 @@ public class StudentController {
         return studentService.findByAgeBetween(min, max);
     }
 
-    @GetMapping("/facultyOfStudent")
+    @GetMapping("/facultyOfStudent/{id}")
     public Faculty findFaculty(@PathVariable long id) {
         return studentService.findFacultyOfStudent(id);
     }
