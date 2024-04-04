@@ -1,22 +1,29 @@
 package ru.hogwarts.school.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.hogwarts.school.exeption.StudentNotFoundException;
 import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.model.Student;
+import ru.hogwarts.school.repository.AvatarRepository;
 import ru.hogwarts.school.repository.StudentRepository;
 import ru.hogwarts.school.service.StudentService;
 
 import java.util.*;
 
 @Service
+
+
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
+    private final AvatarRepository avatarRepository;
 
-    public StudentServiceImpl(StudentRepository studentRepository) {
+    public StudentServiceImpl(StudentRepository studentRepository, AvatarRepository avatarRepository) {
         this.studentRepository = studentRepository;
+        this.avatarRepository = avatarRepository;
     }
+
 
     public Student addStudent(Student student) {
         return studentRepository.save(student);
