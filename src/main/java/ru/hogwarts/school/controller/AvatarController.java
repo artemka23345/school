@@ -2,9 +2,6 @@ package ru.hogwarts.school.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -13,13 +10,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.hogwarts.school.model.Avatar;
 import ru.hogwarts.school.service.AvatarService;
-import ru.hogwarts.school.service.impl.AvatarServiceImpl;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collection;
 
 
 @RestController
@@ -34,12 +30,14 @@ public class AvatarController {
 
 
     @PostMapping(value = "/{studentId}/avatar", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @Operation(summary = "Загрузить аватары по ID")
     public ResponseEntity<String> uploadAvatar(@PathVariable Long studentId, @RequestParam MultipartFile avatar) throws IOException {
         avatarService.uploadAvatar(studentId, avatar);
         return ResponseEntity.ok().build();
     }
 
     @GetMapping(value = "/{id}/avatar-from-db")
+    @Operation(summary = "Получить аватар из БД ")
     public ResponseEntity<byte[]> downloadAvatar(@PathVariable Long id) {
         Avatar avatar = avatarService.findAvatar(id);
         HttpHeaders headers = new HttpHeaders();
@@ -49,6 +47,7 @@ public class AvatarController {
     }
 
     @GetMapping(value = "/{id}/avatar-from-file")
+    @Operation(summary = "Получить все аватары из файлы ")
     public void downloadAvatar(@PathVariable Long id, HttpServletResponse response) throws IOException {
         Avatar avatar = avatarService.findAvatar(id);
         Path path= Path.of(avatar.getFilePath());
@@ -62,4 +61,10 @@ public class AvatarController {
             is.transferTo(os);
         }
     }
-}
+    @GetMapping(value = "/viewAvatars")
+    @Operation(summary = "Получить аватары из БД ")
+    public Collection<Avatar> getAllAvatars(@RequestParam("page") int pageNumber,
+                                      @RequestParam("size") int pageSize) {
+        return avatarService.getAllAvatars(pageNumber, pageSize);
+    }
+    }

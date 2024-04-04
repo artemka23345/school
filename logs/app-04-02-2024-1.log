@@ -1,0 +1,190 @@
+2024-04-02 00:44:04.315  INFO Inv --- [           main] r.h.s.SchoolApplication                  : Starting SchoolApplication using Java 21.0.2 with PID 29620 (C:\Users\User\YandexDisk\Java\Project\Java 19.08.23\school\target\classes started by Inv in C:\Users\User\YandexDisk\Java\Project\Java 19.08.23\school)
+2024-04-02 00:44:04.321  INFO Inv --- [           main] r.h.s.SchoolApplication                  : No active profile set, falling back to 1 default profile: "default"
+2024-04-02 00:44:04.689  INFO Inv --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02 00:44:04.720  INFO Inv --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2024-04-02 00:44:04.957  INFO Inv --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-04-02 00:44:04.963  INFO Inv --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-02 00:44:04.964  INFO Inv --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-04-02 00:44:04.964  INFO Inv --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-02 00:44:04.993  INFO Inv --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-04-02 00:44:04.994  INFO Inv --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 647 ms
+2024-04-02 00:44:05.077  INFO Inv --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02 00:44:05.105  INFO Inv --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-04-02 00:44:05.121  INFO Inv --- [           main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-04-02 00:44:05.238  INFO Inv --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02 00:44:05.254  INFO Inv --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-04-02 00:44:05.365  INFO Inv --- [           main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1218e12
+2024-04-02 00:44:05.366  INFO Inv --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-04-02 00:44:05.940  INFO Inv --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02 00:44:05.992  INFO Inv --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 00:44:06.062 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.062 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.095 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.124 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.126 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.165 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.166 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.178  INFO Inv --- [           main] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-02 00:44:06.180 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.180 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.181 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.181 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.182 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.182 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.184 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.184 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.184 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.184 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.205 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.205 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.216 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.216 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.218 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.218 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 00:44:06.270  WARN Inv --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02 00:44:06.482  INFO Inv --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2024-04-02 00:44:06.491  INFO Inv --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path ''
+2024-04-02 00:44:06.496  INFO Inv --- [           main] r.h.s.SchoolApplication                  : Started SchoolApplication in 2.354 seconds (process running for 4.632)
+2024-04-02 00:44:11.508  INFO Inv --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 00:44:11.509  INFO Inv --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-04-02 00:44:11.510  INFO Inv --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-04-02 17:48:40.219  INFO Inv --- [           main] r.h.s.SchoolApplication                  : Starting SchoolApplication using Java 21.0.2 with PID 4688 (C:\Users\User\YandexDisk\Java\Project\Java 19.08.23\school\target\classes started by Inv in C:\Users\User\YandexDisk\Java\Project\Java 19.08.23\school)
+2024-04-02 17:48:40.224  INFO Inv --- [           main] r.h.s.SchoolApplication                  : No active profile set, falling back to 1 default profile: "default"
+2024-04-02 17:48:40.669  INFO Inv --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02 17:48:40.708  INFO Inv --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2024-04-02 17:48:41.008  INFO Inv --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-04-02 17:48:41.015  INFO Inv --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-02 17:48:41.017  INFO Inv --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-04-02 17:48:41.017  INFO Inv --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-02 17:48:41.052  INFO Inv --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-04-02 17:48:41.053  INFO Inv --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 794 ms
+2024-04-02 17:48:41.150  INFO Inv --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02 17:48:41.192  INFO Inv --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-04-02 17:48:41.216  INFO Inv --- [           main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-04-02 17:48:41.380  INFO Inv --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02 17:48:41.399  INFO Inv --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-04-02 17:48:41.516  INFO Inv --- [           main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6630dd28
+2024-04-02 17:48:41.517  INFO Inv --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-04-02 17:48:42.153  INFO Inv --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02 17:48:42.221  INFO Inv --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 17:48:42.309 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.309 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.343 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.381 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.383 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.430 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.430 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.443  INFO Inv --- [           main] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-02 17:48:42.444 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.444 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.446 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.446 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.446 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.446 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.448 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.448 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.449 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.449 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.468 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.469 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.475 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.475 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.478 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.478 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:48:42.533  WARN Inv --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02 17:48:42.762  INFO Inv --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2024-04-02 17:48:42.772  INFO Inv --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path ''
+2024-04-02 17:48:42.776  INFO Inv --- [           main] r.h.s.SchoolApplication                  : Started SchoolApplication in 2.78 seconds (process running for 5.218)
+2024-04-02 17:49:58.128  INFO Inv --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 17:49:58.129  INFO Inv --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-04-02 17:49:58.131  INFO Inv --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-04-02 17:50:01.136  INFO Inv --- [           main] r.h.s.SchoolApplication                  : Starting SchoolApplication using Java 21.0.2 with PID 11728 (C:\Users\User\YandexDisk\Java\Project\Java 19.08.23\school\target\classes started by Inv in C:\Users\User\YandexDisk\Java\Project\Java 19.08.23\school)
+2024-04-02 17:50:01.140  INFO Inv --- [           main] r.h.s.SchoolApplication                  : No active profile set, falling back to 1 default profile: "default"
+2024-04-02 17:50:01.506  INFO Inv --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02 17:50:01.539  INFO Inv --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2024-04-02 17:50:01.783  INFO Inv --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port 8080 (http)
+2024-04-02 17:50:01.791  INFO Inv --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-02 17:50:01.792  INFO Inv --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2024-04-02 17:50:01.792  INFO Inv --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2024-04-02 17:50:01.830  INFO Inv --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2024-04-02 17:50:01.831  INFO Inv --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 665 ms
+2024-04-02 17:50:01.923  INFO Inv --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02 17:50:01.965  INFO Inv --- [           main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-04-02 17:50:01.983  INFO Inv --- [           main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-04-02 17:50:02.109  INFO Inv --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02 17:50:02.125  INFO Inv --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-04-02 17:50:02.220  INFO Inv --- [           main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34e25492
+2024-04-02 17:50:02.221  INFO Inv --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-04-02 17:50:02.764  INFO Inv --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02 17:50:02.812  INFO Inv --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 17:50:02.901 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:02.901 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:02.933 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:02.964 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:02.965 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.006 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.006 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.021  INFO Inv --- [           main] o.s.d.j.r.q.QueryEnhancerFactory         : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-02 17:50:03.022 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.023 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.024 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.024 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.025 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.025 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.027 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.027 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.029 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.029 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.049 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.050 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.057 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.057 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.059 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.059 TRACE Inv --- [           main] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:03.111  WARN Inv --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02 17:50:03.329  INFO Inv --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2024-04-02 17:50:03.339  INFO Inv --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port 8080 (http) with context path ''
+2024-04-02 17:50:03.343  INFO Inv --- [           main] r.h.s.SchoolApplication                  : Started SchoolApplication in 2.398 seconds (process running for 2.841)
+2024-04-02 17:50:09.203  INFO Inv --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-02 17:50:09.203  INFO Inv --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2024-04-02 17:50:09.204  INFO Inv --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 1 ms
+2024-04-02 17:50:09.229 TRACE Inv --- [nio-8080-exec-1] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:09.254 TRACE Inv --- [nio-8080-exec-2] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:09.286 TRACE Inv --- [nio-8080-exec-3] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:09.458  INFO Inv --- [nio-8080-exec-4] o.s.a.AbstractOpenApiResource            : Init duration for springdoc-openapi is: 154 ms
+2024-04-02 17:50:09.474 TRACE Inv --- [nio-8080-exec-4] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:41.219 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering statement [HikariProxyPreparedStatement@695792669 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:50:41.221 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering result set [HikariProxyResultSet@1737458240 wrapping org.postgresql.jdbc.PgResultSet@63fee574]
+2024-04-02 17:50:41.231 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing result set [HikariProxyResultSet@1737458240 wrapping org.postgresql.jdbc.PgResultSet@63fee574]
+2024-04-02 17:50:41.231 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing result set [HikariProxyResultSet@1737458240 wrapping org.postgresql.jdbc.PgResultSet@63fee574]
+2024-04-02 17:50:41.231 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing statement [HikariProxyPreparedStatement@695792669 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:50:41.231 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing prepared statement [HikariProxyPreparedStatement@695792669 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:50:41.232 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:41.233 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering statement [HikariProxyPreparedStatement@802453450 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:50:41.233 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering result set [HikariProxyResultSet@2067146616 wrapping org.postgresql.jdbc.PgResultSet@6ddaa707]
+2024-04-02 17:50:41.234 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing result set [HikariProxyResultSet@2067146616 wrapping org.postgresql.jdbc.PgResultSet@6ddaa707]
+2024-04-02 17:50:41.234 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing result set [HikariProxyResultSet@2067146616 wrapping org.postgresql.jdbc.PgResultSet@6ddaa707]
+2024-04-02 17:50:41.234 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing statement [HikariProxyPreparedStatement@802453450 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:50:41.234 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing prepared statement [HikariProxyPreparedStatement@802453450 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:50:41.234 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:41.237 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:50:41.237 TRACE Inv --- [nio-8080-exec-5] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:51:09.246 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering statement [HikariProxyPreparedStatement@1380051033 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:51:09.246 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering result set [HikariProxyResultSet@1552288865 wrapping org.postgresql.jdbc.PgResultSet@58b98329]
+2024-04-02 17:51:09.246 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing result set [HikariProxyResultSet@1552288865 wrapping org.postgresql.jdbc.PgResultSet@58b98329]
+2024-04-02 17:51:09.247 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing result set [HikariProxyResultSet@1552288865 wrapping org.postgresql.jdbc.PgResultSet@58b98329]
+2024-04-02 17:51:09.247 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing statement [HikariProxyPreparedStatement@1380051033 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:51:09.247 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing prepared statement [HikariProxyPreparedStatement@1380051033 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:51:09.247 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:51:09.247 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering statement [HikariProxyPreparedStatement@498796122 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:51:09.247 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Registering result set [HikariProxyResultSet@1080370836 wrapping org.postgresql.jdbc.PgResultSet@2cecdffd]
+2024-04-02 17:51:09.248 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing result set [HikariProxyResultSet@1080370836 wrapping org.postgresql.jdbc.PgResultSet@2cecdffd]
+2024-04-02 17:51:09.248 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing result set [HikariProxyResultSet@1080370836 wrapping org.postgresql.jdbc.PgResultSet@2cecdffd]
+2024-04-02 17:51:09.248 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing statement [HikariProxyPreparedStatement@498796122 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:51:09.248 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Closing prepared statement [HikariProxyPreparedStatement@498796122 wrapping SELECT round(avg(age),2) FROM student s]
+2024-04-02 17:51:09.248 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:51:09.248 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:51:09.249 TRACE Inv --- [nio-8080-exec-7] o.h.r.j.i.ResourceRegistryStandardImpl   : Releasing JDBC resources
+2024-04-02 17:52:09.098  INFO Inv --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 17:52:09.099  INFO Inv --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-04-02 17:52:09.100  INFO Inv --- [ionShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
