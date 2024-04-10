@@ -3,6 +3,9 @@ package ru.hogwarts.school.service.impl;
 import jakarta.transaction.Transactional;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import org.apache.logging.slf4j.Log4jLogger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -25,6 +28,7 @@ import java.util.Collection;
 import static java.nio.file.StandardOpenOption.CREATE_NEW;
 
 
+@Log4j2
 @Service
 @Transactional
 @Data
@@ -57,12 +61,15 @@ public class AvatarServiceImpl implements AvatarService {
         avatar.setData(generateImagePreview(filePath));
 
         avatarRepository.save(avatar);
+        log.info("Avatar uploaded");
     }
 
     @Override
     public Avatar findAvatar(long studentId) {
+        log.info("Avatar found");
         return avatarRepository.findByStudentId(studentId)
                 .orElse(new Avatar());
+
     }
 
 
@@ -81,6 +88,8 @@ public class AvatarServiceImpl implements AvatarService {
             ImageIO.write(preview, getExtension(filePath.getFileName().toString()), baos);
             return baos.toByteArray();
         }
+
+
     }
 
     public String getExtension(String fileName) {
@@ -89,6 +98,7 @@ public class AvatarServiceImpl implements AvatarService {
     @Override
     public Collection<Avatar> getAllAvatars(Integer pageNumber, Integer pageSize) {
         Page<Avatar> resultsPage = avatarRepository.findAll(PageRequest.of(pageNumber, pageSize));
+        log.info("All avatars found");
         return resultsPage.getContent();
 
     }
