@@ -3,7 +3,7 @@ package ru.hogwarts.school.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Arrays;
+
 
 @Entity
 @Data

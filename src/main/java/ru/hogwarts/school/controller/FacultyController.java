@@ -1,7 +1,6 @@
 package ru.hogwarts.school.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,15 +14,11 @@ import java.util.Collections;
 
 @RestController
 @RequestMapping("/faculty")
+@RequiredArgsConstructor
 
 public class FacultyController {
 
     private final FacultyService facultyService;
-
-    public FacultyController(FacultyService facultyService) {
-        this.facultyService = facultyService;
-    }
-
 
     @GetMapping("{id}")
     @Operation(summary = "Получить инфо по факультету по ID ")
