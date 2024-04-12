@@ -27,7 +27,7 @@ public class FacultyServiceImpl implements FacultyService {
     public Faculty findFaculty(long id) {
         log.info("Find faculty by id");
         return facultyRepository.findById(id)
-                .orElseThrow(() -> new FacultyNotFoundException());
+                .orElseThrow(FacultyNotFoundException::new);
     }
 
     public Faculty editFaculty(Faculty faculty) {

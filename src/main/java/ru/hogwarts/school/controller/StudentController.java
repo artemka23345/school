@@ -2,6 +2,7 @@ package ru.hogwarts.school.controller;
 
 
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,13 +17,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/student")
+@RequiredArgsConstructor
 public class StudentController {
     private final StudentService studentService;
-
-    public StudentController(StudentService studentService) {
-        this.studentService = studentService;
-    }
-
 
     @GetMapping("{id}")
     @Operation(summary = "Получить инфо студента по ID ")
@@ -65,7 +62,7 @@ public class StudentController {
 
     @GetMapping("/findStudentByAgeBetween")
     @Operation(summary = "Фильтр студентов по возрасту min и max")
-    public Collection<Student> findByAgeBetween(@RequestParam(required = true) Integer max, @RequestParam(required = true) Integer min) {
+    public Collection<Student> findByAgeBetween(@RequestParam() Integer max, @RequestParam() Integer min) {
         return studentService.findByAgeBetween(min, max);
     }
 

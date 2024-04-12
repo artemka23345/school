@@ -26,9 +26,9 @@ import static org.junit.jupiter.api.Assertions.*;
         @Mock
         StudentRepository repository;
 
-        Student STUDENT_1 =new Student (10L,"Harry",12,null);
+        Student STUDENT_1 =new Student (10L,"Harry",77,null);
 
-        Student STUDENT_2 =new Student (12L,"Ron",11,null);
+        Student STUDENT_2 =new Student (12L,"Ron",88,null);
 
         List<Student> studentList;
 
@@ -70,7 +70,7 @@ import static org.junit.jupiter.api.Assertions.*;
         @Test
         void findByAge() {
             List <Student> EXP= List.of(STUDENT_1);
-            int age = 12;
+            int age = 99;
             Mockito.when(repository.findByAge(age)).thenReturn(EXP);
             assertIterableEquals(EXP, out.findStudentByAge(age));
             Mockito.verify(repository,Mockito.times(1)).findByAge(age);

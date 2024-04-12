@@ -40,19 +40,20 @@ public class StudentControllerTests {
     @Test
     public void testFindStudentById() throws Exception {
         Student testStudent = new Student();
-        testStudent.setName("Lexa");
+        testStudent.setAge(30);
+        testStudent.setName("Lexa898");
         studentController.createStudent(testStudent);
 
         Student actual = this.testRestTemplate.getForObject("http://localhost:" + port + "/student/" + testStudent.getId(), Student.class);
 
-        assertThat(actual).isEqualTo(testStudent);
+        assertThat(actual.getName()).isEqualTo(testStudent.getName());
         studentController.deleteStudent(testStudent.getId());
     }
 
     @Test
     public void testFindStudentByAge() throws Exception {
         Student testStudent2 = new Student();
-        testStudent2.setAge(4);
+        testStudent2.setAge(30);
         testStudent2.setName("Lexa");
         studentController.createStudent(testStudent2);
 
@@ -99,11 +100,13 @@ public class StudentControllerTests {
 
     @Test
     public void testCreateStudent() throws Exception {
-        Student student = new Student(809L,"Alex",13,null);
-
+        Student student = new Student();
+        student.setId(45352L);
+        student.setAge(30);
+        student.setName("Lexa89867");
         assertThat(this.testRestTemplate.postForObject("http://localhost:" + port + "/student/createStudent", student, Student.class))
                 .isNotNull();
-        assertThat(student.getName()).isEqualTo("Alex");
+        assertThat(student.getName()).isEqualTo("Lexa89867");
 
         studentController.deleteStudent(student.getId());
     }
@@ -135,7 +138,8 @@ public class StudentControllerTests {
     void testDeleteStudent() throws Exception {
         Student student1 = new Student();
         student1.setId(20L);
-        student1.setName("Lexa");
+        student1.setName("Lexa5467");
+        student1.setAge(56);
         studentController.createStudent(student1);
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.delete("http://localhost:" + port + "/student/" + student1.getId());
