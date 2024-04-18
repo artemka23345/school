@@ -52,21 +52,42 @@ public class StudentServiceImpl implements StudentService {
     public Faculty findFacultyOfStudent(long id) {
         log.info("Find faculty of student");
         return findStudentById(id).getFaculty();
-        }
+    }
 
     @Override
     public Integer getAmountOfStudents() {
         log.info("Get amount of students");
         return studentRepository.amountOfStudents();
     }
-    public Double getAverageAge () {
+
+    public Double getAverageAge() {
         log.info("Get average age");
         return studentRepository.averageAge();
     }
+
     public List<Student> getLastStudents() {
         log.info("Get last students");
         return studentRepository.getLastStudents();
     }
 
+    public List<String> getStudentsNameStartsWith(String letter) {
+        List<Student> exp = studentRepository.findAll();
+        log.info("Get student name starts with");
+        List<String> names = exp
+                .stream()
+                .map(Student::getName)
+                .filter(name -> name.toUpperCase().startsWith(letter))
+                .sorted()
+                .toList();
 
+        return names;
+    }
+    public double getAverageAgeWithStream () {
+        List <Student> students =studentRepository.findAll();
+        return students
+                .stream()
+                .mapToDouble (Student::getAge)
+                .average()
+                .orElse(0);
+    }
 }

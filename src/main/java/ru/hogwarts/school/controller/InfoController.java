@@ -21,5 +21,10 @@ public class InfoController {
     public ResponseEntity<String> getPort() {
         return ResponseEntity.ok(infoService.getCurrentPort());
     }
+    @GetMapping ("/sum")
+    @Operation(summary = "Получить сумму")
+    public ResponseEntity <Integer> getSum () {
+        return ResponseEntity.ok(infoService.getSum());
+    }
 
 }
