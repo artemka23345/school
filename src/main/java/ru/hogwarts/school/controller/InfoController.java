@@ -27,4 +27,5 @@ public class InfoController {
         return ResponseEntity.ok(infoService.getSum());
     }
 
+
 }

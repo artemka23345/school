@@ -27,6 +27,8 @@ public interface StudentService {
     Double getAverageAge ();
     List<Student> getLastStudents();
     List<String> getStudentsNameStartsWith(String letter);
-    public double getAverageAgeWithStream ();
+    double getAverageAgeWithStream ();
+    void printParallel();
+    void printSynchronized();
 
 }
