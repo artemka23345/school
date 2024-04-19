@@ -17,6 +17,7 @@ import java.util.*;
 public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
+    private Integer count = 1;
 
 
     public Student addStudent(Student student) {
@@ -84,10 +85,50 @@ public class StudentServiceImpl implements StudentService {
     }
     public double getAverageAgeWithStream () {
         List <Student> students =studentRepository.findAll();
+        log.info("Get average age with stream");
         return students
                 .stream()
                 .mapToDouble (Student::getAge)
                 .average()
                 .orElse(0);
+    }
+    public void printParallel() {
+        List<Student> students = studentRepository.findAll();
+        log.info("Printing parallel students");
+        System.out.println(students.get(0).getName());
+        System.out.println(students.get(1).getName());
+
+        new Thread(() -> {
+            System.out.println(students.get(2).getName());
+            System.out.println(students.get(3).getName());
+        }).start();
+
+        new Thread(() -> {
+            System.out.println(students.get(4).getName());
+            System.out.println(students.get(5).getName());
+        }).start();
+
+    }
+    public void printSynchronized() {
+        List<Student> students = studentRepository.findAll();
+log.info("Printing synchronized students");
+        printStudentName(students);
+        printStudentName(students);
+
+        new Thread(() -> {
+            printStudentName(students);
+            printStudentName(students);
+        }).start();
+
+        new Thread(() -> {
+            printStudentName(students);
+            printStudentName(students);
+        }).start();
+    }
+
+    private synchronized void printStudentName(List<Student> students) {
+        log.info("Printing student name");
+        System.out.println(count + students.get(count).getName());
+        count++;
     }
 }

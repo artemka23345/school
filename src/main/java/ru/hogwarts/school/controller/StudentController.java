@@ -114,4 +114,16 @@ public class StudentController {
         }
         return ResponseEntity.ok(age);
     }
+    @GetMapping ("/print-parallel")
+    @Operation(summary = "Выводит в консоль имена всех студентов в параллельном режиме")
+    public ResponseEntity <String> printParallel () {
+        studentService.printParallel ();
+        return ResponseEntity.ok("Имена выведены в консоль");
+    };
+    @GetMapping ("/print-synchronized")
+    @Operation(summary = "Выводит в консоль имена всех студентов в синхронном режиме")
+    public ResponseEntity <String> printSynchronized() {
+        studentService.printSynchronized();
+        return ResponseEntity.ok("имена выведены в консоль");
+    }
 }

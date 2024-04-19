@@ -27,4 +27,5 @@ public class InfoServiceImpl implements InfoService {
                 .limit(1_000_000)
                 .reduce(0, Integer::sum );
     }
+
 }
