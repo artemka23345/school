@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.hogwarts.school.service.InfoService;
 
+import java.util.stream.Stream;
+
 @Log4j2
 @Service
 @RequiredArgsConstructor
@@ -18,5 +20,11 @@ public class InfoServiceImpl implements InfoService {
     public String getCurrentPort () {
         log.info("Port: {}", currentPort);
         return currentPort;
+    }
+    public Integer getSum() {
+        log.info("значение вычисляется по формуле");
+        return Stream.iterate(1, a -> a +1)
+                .limit(1_000_000)
+                .reduce(0, Integer::sum );
     }
 }

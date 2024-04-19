@@ -96,4 +96,22 @@ public class StudentController {
         }
         return ResponseEntity.ok(studentService.getLastStudents());
     }
+    @GetMapping ("/getStudentsNameStartsWith/{letter}")
+    @Operation(summary = "Получить все имена всех студентов, чье имя начинается с буквы А")
+    public ResponseEntity <List<String>> getStudentsNameStartsWith(@ PathVariable ("letter") String letter) {
+        List <String> exp = studentService.getStudentsNameStartsWith (letter);
+        if (exp.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(exp);
+    }
+    @GetMapping ("/getAverageAgeWithStream")
+    @Operation(summary = "Cредний возраст всех студентов")
+    public ResponseEntity <Double> getAverageAgeWithStream () {
+        Double age = studentService.getAverageAgeWithStream();
+        if (age==0) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(age);
+    }
 }
